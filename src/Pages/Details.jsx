@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { Routes, Route, useParams, Link } from 'react-router-dom';
-import React, { useEffect, useState  } from 'react'
+import React, { useEffect, useState  } from 'react';
+import Nav from '../Components/Nav';
 
  function Details() {
     const [detail , setDetails] = useState([]);
@@ -33,6 +34,7 @@ import React, { useEffect, useState  } from 'react'
 
   return (
     <div className='details'>
+        {/* <Nav/> */}
         <div className='content-details flex'>
             <div>
             <img className='img w-[200px] h-[200px]' src={detail.image} alt="" />
@@ -41,7 +43,7 @@ import React, { useEffect, useState  } from 'react'
             <div>{detail.title}</div>
             <div>{detail.price}</div>
             <div className='w-[40vw] description'>{detail.description}</div>
-            <Link to='/ShoppingCard'>
+            <Link to={`/ShoppingCard/${detail.id}`}>
             <button onClick={addToCard}>Add To Card</button>
             </Link>
     

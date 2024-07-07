@@ -14,6 +14,7 @@ import ShoppingCard from '../Pages/ShoppingCard';
         {
           path: "/",
           element:<Home/>,
+          errorElement : <Error/>
         },
         {
           path: `/Details/:id`,
@@ -29,6 +30,10 @@ import ShoppingCard from '../Pages/ShoppingCard';
         },
         {
           path: `/ShoppingCard`,
+          element:<ShoppingCard/>,
+        },
+        {
+          path: `/ShoppingCard/:id`,
           element:<ShoppingCard/>,
         },
       ]);
