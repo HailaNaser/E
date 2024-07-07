@@ -109,4 +109,7 @@ li {
   .content {
     margin-top: 10px !important;
   }
+  .content-details {
+    flex-direction: column;
+  }
 }

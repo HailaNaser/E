@@ -13,15 +13,19 @@ import Nav from '../Components/Nav';
             // console.log(res.data.image)
             console.log(res.data)
             setElement(res.data)
-            const filteredElement = element.filter((item)=> (item.title.toLowerCase()).includes(search).toLowerCase())
+            
+    
+           
         })
     },[])
 
+
+    // search
+    // const filteredElement = element.filter((item)=> item.title.toLowerCase().includes(search).toLowerCase())
     if(!element){
         <p>no</p>
     }
-
-    
+   
 
   return (
     
@@ -31,7 +35,7 @@ import Nav from '../Components/Nav';
         <img className='blue' src="https://m.media-amazon.com/images/I/61q5Pg3hO8L._SX3000_.jpg" alt="" />
         <div className='content mt-[-30vh] bg-[#eee]'>
 
-        {element.map((el)=> {
+        {element .map((el)=> {
             return <div key={el.id} >
                 <div className='Box ml-[20px]'>
                     <p className='title '>{el.title}</p>

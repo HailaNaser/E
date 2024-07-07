@@ -20,8 +20,10 @@ import React, { useEffect, useState  } from 'react'
     },[id])
 
     const addToCard =()=> {
-        axios.get(`https://fakestoreapi.com/products/${id}`).then((res)=> {
-
+        const allProdect = []
+        const idUser = localStorage.getItem('userId')
+        axios.put(`https://6657370d9f970b3b36c86882.mockapi.io/login/${id}`).then((res)=> {
+            // prodect : 
         })
     }
 
